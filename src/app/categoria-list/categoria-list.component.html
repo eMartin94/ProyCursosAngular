@@ -1,12 +1,18 @@
-<h1>Listado de Categorias</h1>
-<table class="table table-bordered">
-    <tr>
-        <th>ID</th>
-        <th>Nombre Categoria</th>
-    </tr>
-    <!--ng es como un foreach-->
-    <tr *ngFor="let cat of categoria | async">
-        <td>{{cat.idCategoria}}</td>
-        <td>{{cat.nomCategoria}}</td>
-    </tr>
-</table>
+<div class="container">
+    <h1>Listado de Categorias</h1>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre Categoria</th>
+            </tr>
+        </thead>
+        <!--ng es como un foreach-->
+        <tbody>
+            <tr *ngFor="let cat of categoria | async">
+                <td>{{cat.idCategoria}}</td>
+                <td>{{cat.nomCategoria}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
