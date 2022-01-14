@@ -9,6 +9,7 @@
         </thead>
         <!--ng es como un foreach-->
         <tbody>
+            <!--debe mantener el mismo nombre de los campos tal como esta en la API-->
             <tr *ngFor="let cat of categoria | async">
                 <td>{{cat.idCategoria}}</td>
                 <td>{{cat.nomCategoria}}</td>

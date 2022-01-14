@@ -1,6 +1,6 @@
 export class Categoria{
     
-    idCategoria:number;
+    idC:number;
     nomCategoria:string;
     active:boolean;
 
