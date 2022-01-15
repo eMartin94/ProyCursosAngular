@@ -10,8 +10,8 @@
         <!--ng es como un foreach-->
         <tbody>
             <tr *ngFor="let cat of categoria | async">
-                <td>{{cat.idCategoria}}</td>
-                <td>{{cat.nomCategoria}}</td>
+                <td>{{cat.id}}</td>
+                <td>{{cat.nombre}}</td>
             </tr>
         </tbody>
     </table>

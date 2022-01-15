@@ -8,7 +8,7 @@
 
   export class CategoriaService{
 
-    private baseUrl = 'http://localhost:8083/rest/categorias';
+    private baseUrl = 'http://localhost:8084/cursosweb/rest/categorias/categoria';
     constructor(private http:HttpClient){}
     //listar categorias
     getCategoriasList():Observable<any>{
