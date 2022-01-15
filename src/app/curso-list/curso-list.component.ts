@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Curso } from '../curso';
 import { CursoService } from '../curso.service';
@@ -11,7 +12,7 @@ import { CursoService } from '../curso.service';
 export class CursoListComponent implements OnInit {
 
   curso:Observable<Curso[]>
-  constructor(private servicio:CursoService) { }
+  constructor(private servicio:CursoService,private router:Router) { }
 
   ngOnInit() {
     this.reloadData();
@@ -21,4 +22,6 @@ export class CursoListComponent implements OnInit {
 
     this.curso = this.servicio.getCursos()
   }
+
+  
 }

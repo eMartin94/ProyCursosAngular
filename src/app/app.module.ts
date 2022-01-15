@@ -8,13 +8,17 @@ import { CategoriaListComponent } from './categoria-list/categoria-list.componen
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { CursoListComponent } from './curso-list/curso-list.component';
+import { CategoriaCrearComponent } from './categoria-crear/categoria-crear.component';
+import { CategoriaActualizarComponent } from './categoria-actualizar/categoria-actualizar.component';
 
 @NgModule({
   declarations: [
     //agregamos
     AppComponent,
     CategoriaListComponent,
-    CursoListComponent
+    CursoListComponent,
+    CategoriaCrearComponent,
+    CategoriaActualizarComponent
   ],
   imports: [
     BrowserModule,

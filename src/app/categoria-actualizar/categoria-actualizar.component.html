@@ -1,0 +1,15 @@
+<div class="container">
+    <h1>Actualizarrrr Categoria</h1>
+     <form  class="form-control" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="example" class="form-label" >Id :</label>
+            <input type="text" class="form-control"  name=id required [(ngModel)]="categoria.id">
+        </div>
+        <div class="mb-3">
+            <label for="example" class="form-label" >Nombre :</label>
+            <input type="text" class="form-control" id="nombre" name=nombre required [(ngModel)]="categoria.nombre">
+        </div>
+        <button type="submit" class="btn btn-sm btn-dark">Enviar</button>
+    </form> 
+    
+</div>

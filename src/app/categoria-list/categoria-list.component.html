@@ -1,18 +1,24 @@
 <div class="container">
     <h1>Listado de Categorias</h1>
+    <p><button class="btn btn-danger" (click)="nueva_categoria()">Nueva Categoria</button></p>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>ID</th>
                 <th>Nombre Categoria</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <!--ng es como un foreach-->
         <tbody>
             <!--debe mantener el mismo nombre de los campos tal como esta en la API-->
             <tr *ngFor="let cat of categoria | async">
-                <td>{{cat.idCategoria}}</td>
-                <td>{{cat.nomCategoria}}</td>
+                <td>{{cat.id}}</td>
+                <td>{{cat.nombre}}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger" (click)= actualizar(cat.id)>Actualizar</button>
+                    <button class="btn btn-sm btn-success" (click)=eliminar(cat.id)>Eliminar</button>
+                </td>
             </tr>
         </tbody>
     </table>
