@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>Listado de Cursos</h1>
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Descripcion</th>
+                <th>Duración</th>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+            </tr>
+        </thead>
+        <!--ng es como un foreach-->
+        <tbody>
+            <tr *ngFor="let c of curso | async">
+                <td>{{c.idCursos}}</td>
+                <td>{{c.descripCurso}}</td>
+                <td>{{c.duraCurso}}</td>
+                <td>{{c.imagen}}</td>
+                <td>{{c.nomCurso}}</td>
+                <td>{{c.precio}}</td>
+                <td>{{c.categoria.nomCategoria}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

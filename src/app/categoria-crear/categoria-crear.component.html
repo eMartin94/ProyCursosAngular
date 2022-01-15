@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>Nueva Categoria</h1>
+    <form  class="form-control" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="example" class="form-label" >Nombre :</label>
+            <input type="text" class="form-control" id="example" name=nombre [(ngModel)]="categoriaNuevo.nombre">
+        </div>
+        <button type="submit" class="btn btn-sm btn-dark">Enviar</button>
+    </form> 
+    
+</div>
+
