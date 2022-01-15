@@ -21,11 +21,14 @@ export class CategoriaActualizarComponent implements OnInit {
     this.servicioCategoria.getCategoriaPorId(this.id).subscribe(
       data=>{console.log(data);this.categoria=data},error=>console.error(error));
       this.categoria = new Categoria();
+      
+      
   }
   actualizandoCategoria(){
     this.servicioCategoria.putCategoria(this.id,this.categoria)
     .subscribe(data=>console.log(data),error=>console.log(error));
     this.categoria=new Categoria();
+    
   }
   onSubmit(){
     this.actualizandoCategoria();

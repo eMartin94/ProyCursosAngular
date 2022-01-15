@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { CursoListComponent } from './curso-list/curso-list.component';
 import { CategoriaCrearComponent } from './categoria-crear/categoria-crear.component';
 import { CategoriaActualizarComponent } from './categoria-actualizar/categoria-actualizar.component';
+import { CursoCrearComponent } from './curso-crear/curso-crear.component';
+import { CursoActualizarComponent } from './curso-actualizar/curso-actualizar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { CategoriaActualizarComponent } from './categoria-actualizar/categoria-a
     CategoriaListComponent,
     CursoListComponent,
     CategoriaCrearComponent,
-    CategoriaActualizarComponent
+    CategoriaActualizarComponent,
+    CursoCrearComponent,
+    CursoActualizarComponent
   ],
   imports: [
     BrowserModule,
