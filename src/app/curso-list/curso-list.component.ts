@@ -28,4 +28,8 @@ export class CursoListComponent implements OnInit {
   actualizarCurso(id:number){
     this.router.navigate(['/actualizarCurso',id])
   }
+  eliminarCurso(id:number){
+    this.servicio.deleteCurso(id).subscribe(data=>console.log(data),error=>console.error(error));
+    
+  }
 }

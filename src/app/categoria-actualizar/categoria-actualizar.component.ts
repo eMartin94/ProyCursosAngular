@@ -10,19 +10,16 @@ import { CategoriaService } from '../categoria.service';
 })
 export class CategoriaActualizarComponent implements OnInit {
 
-  id:number;
   categoria:Categoria;
+  id:number;
   constructor(private route:ActivatedRoute,private router:Router,private servicioCategoria:CategoriaService) { }
 
   ngOnInit() {
     this.categoria = new Categoria();
     this.id = this.route.snapshot.params['id'];
-
-    this.servicioCategoria.getCategoriaPorId(this.id).subscribe(
-      data=>{console.log(data);this.categoria=data},error=>console.error(error));
-      this.categoria = new Categoria();
-      
-      
+    this.servicioCategoria.getCategoriaPorId(this.id)
+    .subscribe(data=>{console.log(data);this.categoria=data},error=>console.log(error));
+    this.categoria= new Categoria();
   }
   actualizandoCategoria(){
     this.servicioCategoria.putCategoria(this.id,this.categoria)

@@ -23,9 +23,10 @@
         return this.http.post(`${this.baseUrl}`,categoria);
     }
     //actualizar categoria
-    putCategoria(id:number,value:any):Observable<Object>{
-        return this.http.put(`${this.baseUrl}/${id}`,value);
+    putCategoria(id:number,categoria:Object):Observable<Object>{
+        return this.http.put(`${this.baseUrl}/${id}`,categoria);
     }
+
     //eliminar categoria
     deleteCategoria(id:number):Observable<any>{
       return this.http.delete(`${this.baseUrl}/${id}`)

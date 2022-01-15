@@ -14,7 +14,7 @@ const routes: Routes = [
   {path:'', redirectTo:'categoria',pathMatch:'full'},
   {path:'categorias',component:CategoriaListComponent},
   {path:'nuevacategoria',component:CategoriaCrearComponent},
-  {path:'actualizarCategoria/:id ',component:CategoriaActualizarComponent},
+  {path:'actualizar/:id',component:CategoriaActualizarComponent},
 
 
   {path:'cursos',component:CursoListComponent},

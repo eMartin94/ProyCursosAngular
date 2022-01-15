@@ -28,7 +28,7 @@ export class CategoriaListComponent implements OnInit {
   }
 
   actualizar(id:number){
-    this.router.navigate(['/actualizarCategoria',id]);
+    this.router.navigate(['/actualizar',id]);
   }
   eliminar(id:number){
     this.categoriaservice.deleteCategoria(id).subscribe(data=>console.log(data),error=>console.log(error));

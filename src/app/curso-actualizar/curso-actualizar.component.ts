@@ -21,5 +21,17 @@ export class CursoActualizarComponent implements OnInit {
     .subscribe(data=>{console.log(data);this.curso=data},error=>console.log(error));
     this.curso= new Curso();
   }
+  actualizando(){
+    this.servicioCurso.putCurso(this.id,this.curso).subscribe(
+      data=>console.log(data),error=>console.error(error));
+      this.curso = new Curso();
+  }
+  onSubmit(){
+    this.actualizando();
+    this.listarCurso();
+  }
+  listarCurso(){
+    this.router.navigate(['/cursos']);
+  }
 
 }

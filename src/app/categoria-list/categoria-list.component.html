@@ -12,12 +12,12 @@
         <!--ng es como un foreach-->
         <tbody>
             <!--debe mantener el mismo nombre de los campos tal como esta en la API-->
-            <tr *ngFor="let cat of categoria | async">
-                <td>{{cat.id}}</td>
-                <td>{{cat.nombre}}</td>
+            <tr *ngFor="let categoria of categoria | async">
+                <td>{{categoria.id}}</td>
+                <td>{{categoria.nombre}}</td>
                 <td>
-                    <button class="btn btn-sm btn-danger" (click)= actualizar(cat.id)>Actualizar</button>
-                    <button class="btn btn-sm btn-success" (click)=eliminar(cat.id)>Eliminar</button>
+                    <button class="btn btn-sm btn-danger" (click)=actualizar(categoria.id)>Actualizar</button>
+                    <button class="btn btn-sm btn-success" (click)=eliminar(categoria.id)>Eliminar</button>
                 </td>
             </tr>
         </tbody>
