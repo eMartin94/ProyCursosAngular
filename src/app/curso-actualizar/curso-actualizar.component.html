@@ -1,0 +1,20 @@
+<p>curso-actualizar works!</p>
+<div class="container">
+    <h1>Actualizar Curso</h1>
+    <form  class="form-control" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="example" class="form-label" >Nombre :</label>
+            <input type="text" class="form-control" id="example" name=nombre [(ngModel)]="curso.nombre">
+        </div>
+        <div class="mb-3">
+            <label for="example" class="form-label" >Duracion :</label>
+            <input type="text" class="form-control" id="example" name=duracion [(ngModel)]="curso.duracion">
+        </div>
+        <div class="mb-3">
+            <label for="example" class="form-label" >costo :</label>
+            <input type="text" class="form-control" id="example" name=costo [(ngModel)]="curso.costo">
+        </div>
+        <button type="submit" class="btn btn-sm btn-dark">Enviar</button>
+    </form> 
+    
+</div>

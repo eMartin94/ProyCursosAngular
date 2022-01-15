@@ -19,9 +19,13 @@ export class CursoListComponent implements OnInit {
   }
 
   reloadData(){
-
     this.curso = this.servicio.getCursos()
   }
 
-  
+  cursonuevo(){
+    this.router.navigate(['/nuevoCurso'])
+  }
+  actualizarCurso(id:number){
+    this.router.navigate(['/actualizarCurso',id])
+  }
 }

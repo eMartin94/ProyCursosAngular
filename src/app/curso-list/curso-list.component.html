@@ -1,27 +1,27 @@
 <div class="container">
     <h1>Listado de Cursos</h1>
+    <button class="btn btn-danger" (click)="cursonuevo()">Nuevo Curso</button>
+    <br><br>
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>ID</th>
-                <th>Descripcion</th>
-                <th>Duración</th>
-                <th>Imagen</th>
+                <th>Id</th>
                 <th>Nombre</th>
-                <th>Precio</th>
-                <th>Categoria</th>
+                <th>Duración</th>
+                <th>Costo</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <!--ng es como un foreach-->
         <tbody>
             <tr *ngFor="let c of curso | async">
-                <td>{{c.idCursos}}</td>
-                <td>{{c.descripCurso}}</td>
-                <td>{{c.duraCurso}}</td>
-                <td>{{c.imagen}}</td>
-                <td>{{c.nomCurso}}</td>
-                <td>{{c.precio}}</td>
-                <td>{{c.categoria.nomCategoria}}</td>
+                <td>{{c.id}}</td>
+                <td>{{c.nombre}}</td>
+                <td>{{c.duracion}}</td>
+                <td>{{c.costo}}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger" (click)="actualizarCurso(c.id)">Actualizar</button>
+                </td>
             </tr>
         </tbody>
     </table>
