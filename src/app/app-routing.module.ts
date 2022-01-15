@@ -14,7 +14,11 @@ const routes: Routes = [
   {path:'', redirectTo:'categoria',pathMatch:'full'},
   {path:'categorias',component:CategoriaListComponent},
   {path:'nuevacategoria',component:CategoriaCrearComponent},
+<<<<<<< HEAD
   {path:'actualizar/:id',component:CategoriaActualizarComponent},
+=======
+  {path:'actualizarCategoria/:id ', component:CategoriaActualizarComponent},
+>>>>>>> acbd7f2538a5f59f3e16cfd6b8d4c50954d42247
 
 
   {path:'cursos',component:CursoListComponent},
